@@ -126,5 +126,5 @@ sh start.sh restart
 - **如何更改程序的名称？**
   编辑脚本中的 `APP_NAME` 变量，以匹配应用程序的实际名称。
 - **如何更改程序的启动参数？**
-  编辑脚本中 'nohup java -jar ${APP_NAME} --server.port=8082 -Xmx512m -Xms512m -Xmn256m >> ${LOG_FILE} 2>&1 &'   部分，根据自己实际需要设置参数
+  编辑脚本中 `nohup java -jar ${APP_NAME} --server.port=8082 -Xmx512m -Xms512m -Xmn256m >> ${LOG_FILE} 2>&1 &`   部分，根据自己实际需要设置参数
 
