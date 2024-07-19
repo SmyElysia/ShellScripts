@@ -130,8 +130,6 @@ sh ant_logs_cleanup.sh
   使用以下命令查看当前用户的 `cron` 任务列表：
 
   ```
-  bash
-  复制代码
   crontab -l
   ```
 
