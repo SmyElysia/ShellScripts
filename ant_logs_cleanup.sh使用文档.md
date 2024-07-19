@@ -9,8 +9,6 @@
 将脚本保存为 `ant_logs_cleanup.sh` 文件，并确保它具有执行权限：
 
 ```
-bash
-复制代码
 chmod +x ant_logs_cleanup.sh
 ```
 
@@ -19,8 +17,6 @@ chmod +x ant_logs_cleanup.sh
 要运行脚本，请使用以下命令：
 
 ```
-bash
-复制代码
 sh ant_logs_cleanup.sh
 ```
 
@@ -53,16 +49,12 @@ sh ant_logs_cleanup.sh
 运行脚本示例：
 
 ```
-bash
-复制代码
 sh ant_logs_cleanup.sh
 ```
 
 脚本执行后会输出清理的日志信息：
 
 ```
-css
-复制代码
 清理了超过30天的日志,包括YYYY-MM-DD之前的日志。
 ```
 
@@ -72,3 +64,81 @@ css
   编辑脚本中的 `-mtime +30` 参数，以更改日志文件的保留天数。例如，将 `30` 修改为 `60` 以保留60天的日志。
 - **如何更改日志目录？**
   编辑脚本中的 `LOG_DIR` 变量，以设置新的日志文件目录路径。
+
+
+
+
+
+
+
+
+
+### 设置定时任务
+
+要设置定时任务以定期运行 `ant_logs_cleanup.sh` 脚本，你可以使用 `cron` 工具。在 Linux 系统中，`cron` 是一个用于定期执行任务的工具。
+
+以下是设置 `cron` 任务的步骤和示例：
+
+1. **编辑 `crontab` 文件**
+
+   打开 `crontab` 文件进行编辑：
+
+   ```
+   crontab -e
+   ```
+
+2. **添加定时任务**
+
+   在 `crontab` 文件中，添加一行来设置定时任务。以下是一个示例，表示每天凌晨2点执行 `ant_logs_cleanup.sh` 脚本：
+
+   ```
+   0 2 * * * /path/to/ant_logs_cleanup.sh
+   ```
+
+   解释：
+
+   - `0 2 * * *`：每天凌晨2点执行任务
+   - `/path/to/ant_logs_cleanup.sh`：脚本的绝对路径
+
+   **注意**：将 `/path/to/ant_logs_cleanup.sh` 替换为实际的脚本路径。
+
+3. **保存并退出**
+
+   保存 `crontab` 文件并退出编辑器。`cron` 会自动加载新的定时任务设置。
+
+### 示例
+
+假设脚本 `ant_logs_cleanup.sh` 位于 `/root/scripts/` 目录中，你可以设置如下的 `cron` 任务：
+
+1. 打开 `crontab` 文件：
+
+   ```
+   crontab -e
+   ```
+
+2. 添加以下行以每天凌晨2点执行脚本：
+
+   ```
+   0 2 * * * /root/scripts/ant_logs_cleanup.sh
+   ```
+
+3. 保存并退出编辑器。
+
+### 常见问题
+
+- **如何查看当前的定时任务？**
+  使用以下命令查看当前用户的 `cron` 任务列表：
+
+  ```
+  bash
+  复制代码
+  crontab -l
+  ```
+
+- **如何删除定时任务？**
+  打开 `crontab` 文件并删除相关的任务行，然后保存并退出。
+
+- **如何调试脚本？**
+  如果脚本未按预期运行，可以检查系统的 `cron` 日志（通常在 `/var/log/syslog` 或 `/var/log/cron` 中），以确认脚本是否执行或是否出现错误。
+
+通过设置定时任务，你可以确保日志清理脚本定期运行，保持日志目录的整洁。
