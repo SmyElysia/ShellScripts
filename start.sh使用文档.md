@@ -30,7 +30,7 @@ sh start.sh start
 或者
 
 ```
-./ start.sh start
+./start.sh start
 ```
 
 ##### 停止程序
@@ -42,7 +42,7 @@ sh start.sh stop
 或者
 
 ```
-./ start.sh stop
+./start.sh stop
 ```
 
 ##### 重启程序
@@ -54,7 +54,7 @@ sh start.sh restart
 或者
 
 ```
-./ start.sh restart
+./start.sh restart
 ```
 
 ##### 查看程序状态
@@ -66,7 +66,7 @@ sh start.sh status
 或者
 
 ```
-./ start.sh status
+./start.sh status
 ```
 
 #### 脚本功能
@@ -126,5 +126,5 @@ sh start.sh restart
 - **如何更改程序的名称？**
   编辑脚本中的 `APP_NAME` 变量，以匹配应用程序的实际名称。
 - **如何更改程序的启动参数？**
-  编辑脚本中 nohup java -jar ${APP_NAME} --server.port=8082 -Xmx512m -Xms512m -Xmn256m >> ${LOG_FILE} 2>&1 &   部分，根据自己实际需要设置参数
+  编辑脚本中 'nohup java -jar ${APP_NAME} --server.port=8082 -Xmx512m -Xms512m -Xmn256m >> ${LOG_FILE} 2>&1 &'   部分，根据自己实际需要设置参数
 
