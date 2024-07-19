@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#系统管理与维护
+#系统管理与维护脚本
 
 # 1. 系统信息收集
 echo "System Information:" >> system_report.log
