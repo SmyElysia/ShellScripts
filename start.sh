@@ -1,4 +1,5 @@
 #!/bin/bash
+# 启动脚本文件
 # 执行程序位置以及生成的日志文件位置
 APP_NAME=Ant-0.0.1-SNAPSHOT.jar
 LOG_DIR=/root/trap/logs
