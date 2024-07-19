@@ -7,10 +7,10 @@ Linux运行常见shell脚本
 
 ## start.sh
 发包启动脚本，可以启动jar包服务，可执行四种子命令：
-- **start**: 启动
-- **stop**: 停止
-- **restart**: 重启
-- **status**: 状态
+`start` 启动
+`stop` 停止
+`restart` 重启
+`status` 状态
 
 ## system_check.sh
 系统管理与维护脚本，可实现以下功能：
