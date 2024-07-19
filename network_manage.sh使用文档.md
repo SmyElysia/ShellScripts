@@ -18,16 +18,12 @@
 **用法**:
 
 ```
-bash
-复制代码
 ./network_management.sh view_connections
 ```
 
 **示例**:
 
 ```
-bash
-复制代码
 ./network_management.sh view_connections
 ```
 
@@ -38,8 +34,6 @@ bash
 **用法**:
 
 ```
-bash
-复制代码
 ./network_management.sh check_connectivity <主机> <端口>
 ```
 
@@ -51,8 +45,6 @@ bash
 **示例**:
 
 ```
-bash
-复制代码
 ./network_management.sh check_connectivity example.com 80
 ```
 
@@ -63,16 +55,12 @@ bash
 **用法**:
 
 ```
-bash
-复制代码
 ./network_management.sh view_traffic
 ```
 
 **示例**:
 
 ```
-bash
-复制代码
 ./network_management.sh view_traffic
 ```
 
@@ -83,8 +71,6 @@ bash
 **用法**:
 
 ```
-bash
-复制代码
 ./network_management.sh manage_firewall <操作> [端口]
 ```
 
@@ -98,24 +84,18 @@ bash
 - 查看防火墙规则:
 
   ```
-  bash
-  复制代码
   ./network_management.sh manage_firewall view_rules
   ```
 
 - 添加防火墙规则:
 
   ```
-  bash
-  复制代码
   ./network_management.sh manage_firewall add_rule 80
   ```
 
 - 删除防火墙规则:
 
   ```
-  bash
-  复制代码
   ./network_management.sh manage_firewall delete_rule 80
   ```
 
@@ -126,16 +106,12 @@ bash
 **示例**:
 
 ```
-bash
-复制代码
 ./network_management.sh invalid_action
 ```
 
 输出:
 
 ```
-javascript
-复制代码
 Error: Invalid action: invalid_action
 ```
 
