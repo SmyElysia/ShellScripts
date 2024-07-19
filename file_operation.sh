@@ -1,5 +1,5 @@
 #!/bin/bash
-# 文件操作脚本
+# 文件操作脚本文件
 # 1. 文件备份
 backup_file() {
     local file="$1"
